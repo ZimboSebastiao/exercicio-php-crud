@@ -37,81 +37,81 @@ function situacao($resultado):string{
 
 
 
+function inserirAluno(PDO $conexao, string $nome, float $primeira, float $segunda):void{
 
-// $dados = lerFabricantes($conexao);
-// var_dump($dados);
+    $sql = "INSERT INTO alunos(nome, primeira, segunda) VALUES(:nome, :primeira, :segunda)";
 
-
-// Usada em fabricantes/inserir.php
-// function inserirFabricante(PDO $conexao, string $nomeFrabicante):void{
-//     // :qualquerCoisa -> Isso indica um "named parameter" (parâmetro nomeado)
-//     $sql = "INSERT INTO fabricantes(nome) VALUES(:nome)";
-
-//     try {
+    try {
         
-//         $consulta = $conexao->prepare($sql);
+        $consulta = $conexao->prepare($sql);
         
-//         // bindValue() -> permite vincular o valor existente no parâmetro nomeado (:nome) à consulta que será executada.
-//         // É necessário indicar qual é o parâmetro (:nome), de onde vem o valor ($nomeFabricante) e de que tipo é (PDO::PARAM_STR)
-//         $consulta->bindValue(":nome", $nomeFrabicante, PDO::PARAM_STR);
-//         $consulta->execute();
+        
+        $consulta->bindValue(":nome", $nome, PDO::PARAM_STR);
+        $consulta->bindValue(":primeira", $primeira, PDO::PARAM_STR);
+        $consulta->bindValue(":segunda", $segunda, PDO::PARAM_STR);
+        $consulta->execute();
 
-//     } catch (Exception $erro) {
-//         die("Erro ao inserir: ".$erro->getMessage());
-//     }
+    } catch (Exception $erro) {
+        die("Erro ao inserir: ".$erro->getMessage());
+    }
 
-// } // Fim inserirFabricante
+}
 
-// // Usada em fabricantes/atualizar.php
-// function lerUmFabricante( PDO $conexao, int $idFabricante):array{
-//     $sql = "SELECT * FROM fabricantes WHERE id = :id";
 
-//     try {
-//        $consulta = $conexao->prepare($sql);
-//        $consulta->bindValue(":id", $idFabricante, PDO::PARAM_INT);
-//        $consulta->execute();
-//        $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+function  lerUmAluno(PDO $conexao, int $id):array{
+    $sql = "SELECT * FROM alunos WHERE id = :id";
 
-//     } catch (Exception $erro) {
-//         die("Erro ao carregar: ".$erro->getMessage());
-//     } 
+    try {
+       $consulta = $conexao->prepare($sql);
+       $consulta->bindValue(":id", $id, PDO::PARAM_INT);
+       $consulta->execute();
+       $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+
+    } catch (Exception $erro) {
+        die("Erro ao carregar: ".$erro->getMessage());
+    } 
     
-//     return $resultado;
+    return $resultado;
 
-// } // Fim lerUmFabricante
+}
 
-// // Usada em fabricantes/atualizar.php
-// function atualizarFabricante(PDO $conexao, string $nomeFabricante, int $idFabricante):void{
-//     $sql = "UPDATE fabricantes SET nome = :nome  WHERE  id = :id";
+function atualizarAlunos(PDO $conexao, string $nome, float $primeira, float $segunda, int $id):void{
+    $sql = "UPDATE alunos
+            SET nome = :nome, 
+            primeira = :primeira, 
+            segunda = :segunda  
+            WHERE  id = :id";
 
-//     try {
-//         $consulta = $conexao->prepare($sql);
-//         $consulta->bindValue(":nome", $nomeFabricante,  PDO::PARAM_STR);
-//         $consulta->bindValue(":id", $idFabricante,  PDO::PARAM_INT);
-//         $consulta->execute();
-//     } catch (Exception $erro) {
-//         die("Erro ao atualizar: ".$erro->getMessage());
-//     }
+    try {
+        $consulta = $conexao->prepare($sql);
+        $consulta->bindValue(":nome", $nome,  PDO::PARAM_STR);
+        $consulta->bindValue(":primeira", $primeira,  PDO::PARAM_STR);
+        $consulta->bindValue(":segunda", $segunda,  PDO::PARAM_STR);
+        $consulta->bindValue(":id", $id,  PDO::PARAM_INT);
+        $consulta->execute();
+    } catch (Exception $erro) {
+        die("Erro ao atualizar: ".$erro->getMessage());
+    }
     
 
 
-// }//Fim atualizarFabricante
+}
 
 // // Usada em fabricantes/deletar.php
-// function deletarFabricante( PDO $conexao, int $idFabricante):void{
-//     $sql = "DELETE FROM fabricantes WHERE id = :id";
+function deletarAluno( PDO $conexao, int $id):void{
+    $sql = "DELETE FROM alunos WHERE id = :id";
 
-//     try {
-//        $consulta = $conexao->prepare($sql);
-//        $consulta->bindValue(":id", $idFabricante, PDO::PARAM_INT);
-//        $consulta->execute();
+    try {
+       $consulta = $conexao->prepare($sql);
+       $consulta->bindValue(":id", $id, PDO::PARAM_INT);
+       $consulta->execute();
 
-//     } catch (Exception $erro) {
-//         die("Erro ao carregar: ".$erro->getMessage());
-//     } 
+    } catch (Exception $erro) {
+        die("Erro ao carregar: ".$erro->getMessage());
+    } 
     
 
-// } // Fim deletarFabricante
+}
 
 
 ?>
