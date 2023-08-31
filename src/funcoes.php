@@ -23,18 +23,15 @@ function calcularMedia(float $n1, float $n2):float{
 }
 
 function situacao($resultado):string{
-
-    
     if($resultado >= 7){
-        return "Aprovado";
+        return  "Aprovado";
 
     } elseif ($resultado >= 5 AND $resultado < 7){
-        return "Recuperação";
+        return  "Recuperação";
     } else {
-        return "Reprovado";
+        return  "Reprovado";
     }  
 }
-
 
 
 function inserirAluno(PDO $conexao, string $nome, float $primeira, float $segunda):void{
@@ -44,8 +41,6 @@ function inserirAluno(PDO $conexao, string $nome, float $primeira, float $segund
     try {
         
         $consulta = $conexao->prepare($sql);
-        
-        
         $consulta->bindValue(":nome", $nome, PDO::PARAM_STR);
         $consulta->bindValue(":primeira", $primeira, PDO::PARAM_STR);
         $consulta->bindValue(":segunda", $segunda, PDO::PARAM_STR);
@@ -97,7 +92,6 @@ function atualizarAlunos(PDO $conexao, string $nome, float $primeira, float $seg
 
 }
 
-// // Usada em fabricantes/deletar.php
 function deletarAluno( PDO $conexao, int $id):void{
     $sql = "DELETE FROM alunos WHERE id = :id";
 
@@ -110,7 +104,6 @@ function deletarAluno( PDO $conexao, int $id):void{
         die("Erro ao carregar: ".$erro->getMessage());
     } 
     
-
 }
 
 
