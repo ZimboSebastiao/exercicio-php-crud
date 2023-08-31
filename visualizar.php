@@ -18,49 +18,43 @@ $listaDeAlunos = lerAlunos($conexao);
     <hr>
     <p><a href="inserir.php">Inserir novo aluno</a></p>
 
-          <!-- ======== TABELA ========= -->
-          <table class="table">
-            <thead>
-                <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Primeira Nota</th>
-                <th>Segunda Nota</th>
-                <th>Média</th>
-                <th>Situação</th>
-                </tr>
-            </thead>
-          <tbody>
+    <!-- ======== TABELA ========= -->
+    <table class="table">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Primeira Nota</th>
+            <th>Segunda Nota</th>
+            <th>Média</th>
+            <th>Situação</th>
+            <th>Operações</th>
+            </tr>
+        </thead>
+        <tbody>
             <?php foreach ($listaDeAlunos as $aluno) { ?>
-                <tr>
-                    <td><?=$aluno["id"]?></td>
-                    <td><?=$aluno["nome"]?></td>
-                    <td><?=$aluno["primeira"]?></td>
-                    <td><?=$aluno["segunda"]?></td>
-                    <td><?=$resultado = calcularMedia($aluno["primeira"] , $aluno["segunda"])?></td>
-                    <td><?=situacao($resultado)?></td>
-        
+            <tr>
+                <td><?=$aluno["id"]?></td>
+                <td><?=$aluno["nome"]?></td>
+                <td><?=$aluno["primeira"]?></td>
+                <td><?=$aluno["segunda"]?></td>
+                <td><?=$resultado = calcularMedia($aluno["primeira"] , $aluno["segunda"])?></td>
+                <td><?=situacao($resultado)?></td>
 
+                <td>
+                    <!-- ===== Editar ====== -->
+                    <a href="atualizar.php?id=<?=$aluno["id"]?>&nome=<?=$aluno["nome"]?>">
+                    Editar</a>
 
-                        <!-- ===== Editar ====== -->
-                        <!-- <a href="atualizar.php?id=<?=$aluno["id"]?>&nome=<?=$aluno["nome"]?>">
-                        Editar</a> -->
-
-                          
-                        <!-- ===== Excluir ====== -->
-                        <!-- <a  href="deletar.php?id=<?=$aluno["id"]?>&nome=<?=$aluno["nome"]?>">
-                            Apagar</a> -->
-                    </td>
-                </tr>
-                <?php ;}?>
-            </tbody>
-        </table> <!-- FIM TABELA  -->
-
-
-   <!-- 
-
-Obs.: não se esqueça de criar também os links dinâmicos para
-as páginas de atualização e exclusão. -->
+                        
+                    <!-- ===== Excluir ====== -->
+                    <a  href="deletar.php?id=<?=$aluno["id"]?>&nome=<?=$aluno["nome"]?>">
+                        Apagar</a>
+                </td>
+            </tr>
+            <?php ;}?>
+        </tbody>
+    </table> <!-- FIM TABELA  -->
 
 
     <p><a href="index.php">Voltar ao início</a></p>
