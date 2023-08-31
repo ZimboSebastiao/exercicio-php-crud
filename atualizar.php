@@ -44,6 +44,7 @@
     <hr>
     <p><a href="visualizar.php">Voltar à lista de alunos</a></p>
 
+    
 </div>
 
 
