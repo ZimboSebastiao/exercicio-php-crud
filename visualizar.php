@@ -1,3 +1,9 @@
+<?php require_once "src/funcoes.php";
+
+$listaDeAlunos = lerAlunos($conexao);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,8 +18,46 @@
     <hr>
     <p><a href="inserir.php">Inserir novo aluno</a></p>
 
-   <!-- Aqui você deverá criar o HTML que quiser e o PHP necessários
-para exibir a relação de alunos existentes no banco de dados.
+          <!-- ======== TABELA ========= -->
+          <table class="table">
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Primeira Nota</th>
+                <th>Segunda Nota</th>
+                <th>Média</th>
+                <th>Situação</th>
+                </tr>
+            </thead>
+          <tbody>
+            <?php foreach ($listaDeAlunos as $aluno) { ?>
+                <tr>
+                    <td><?=$aluno["id"]?></td>
+                    <td><?=$aluno["nome"]?></td>
+                    <td><?=$aluno["primeira"]?></td>
+                    <td><?=$aluno["segunda"]?></td>
+                    <td><?=$resultado = calcularMedia($aluno["primeira"] , $aluno["segunda"])?></td>
+                    <td><?=situacao($resultado)?></td>
+        
+
+
+                        <!-- ===== Editar ====== -->
+                        <!-- <a href="atualizar.php?id=<?=$aluno["id"]?>&nome=<?=$aluno["nome"]?>">
+                        Editar</a> -->
+
+                          
+                        <!-- ===== Excluir ====== -->
+                        <!-- <a  href="deletar.php?id=<?=$aluno["id"]?>&nome=<?=$aluno["nome"]?>">
+                            Apagar</a> -->
+                    </td>
+                </tr>
+                <?php ;}?>
+            </tbody>
+        </table> <!-- FIM TABELA  -->
+
+
+   <!-- 
 
 Obs.: não se esqueça de criar também os links dinâmicos para
 as páginas de atualização e exclusão. -->
