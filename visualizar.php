@@ -65,7 +65,8 @@ $listaDeAlunos = lerAlunos($conexao);
     </nav>
     <h1>Lista de alunos</h1>
     <hr>
-    <p><a href="inserir.php">Inserir novo aluno</a></p>
+    <p><a href="index.php">Voltar ao início</a></p>
+    
 
     <!-- ======== TABELA ========= -->
     <table class="table table-bordered table-secondary table-striped">
@@ -106,7 +107,14 @@ $listaDeAlunos = lerAlunos($conexao);
     </table> <!-- FIM TABELA  -->
 
 
-    <p><a href="index.php">Voltar ao início</a></p>
+    <a href="inserir.php" class="btn btn-primary bi bi-plus-lg" tabindex="-1" role="button" aria-disabled="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"></path>
+        </svg>
+        Adicionar novo aluno</a>
+          
+    
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
