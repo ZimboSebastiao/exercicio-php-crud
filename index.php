@@ -18,7 +18,7 @@ $quantidade = count($listaDeAlunos);
 <body>
 
 <!-- ======== SideBar ======== -->
-<header>
+<!-- <header>
 
     <a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -30,16 +30,22 @@ $quantidade = count($listaDeAlunos);
         </a> 
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <div class="offcanvas-header ima">
+
+        <div class="letras">
+
+            <p>Painel Admin - Master</p>
+            <p>Painel Admin - Master</p>
+            <p>Painel Admin - Master</p>
+            <p>Painel Admin - Master</p>
+        </div>
         <br>
-        <p>Painel Admin - Master</p>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <hr>
     <div class="offcanvas-body">
         <div>
-            <a href="inserir.php" class="btn btn-primary" role="button" aria-disabled="true">Primary link</a>
+            <a href="inserir.php" class=" " role="button" aria-disabled="true"></a>
 
         </div>
 
@@ -55,7 +61,7 @@ $quantidade = count($listaDeAlunos);
         </div>
     </div>
     </div>
-</header> <!-- FIM SideBar  -->
+</header>  -->
 
 
 <!-- ======== Container - Tiago ======== -->

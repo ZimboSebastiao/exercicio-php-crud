@@ -31,11 +31,11 @@ if(isset($_POST['atualizar'])){
 </head>
 <body>
 
-<p class="logo">
+<!-- <p class="logo">
     <a href="index.php">
         <img src="img/logo1.png" alt="Menu" width="130" height="32">
     </a>
-</p>
+</p> -->
 
 <main>
     <!-- ======== Container - Tiago ======== -->

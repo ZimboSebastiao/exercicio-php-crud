@@ -85,6 +85,8 @@ a:hover, a:focus { text-decoration: underline;}
     color: green;
     text-align: center;
     font-size: 23px;
+    padding: 20px;
+    
 }
 
 .deletar {color: red;}
@@ -92,7 +94,21 @@ a:hover, a:focus { text-decoration: underline;}
 /* ========= ATUALIZAR ========= */
 
 .centro {
+    padding: 20px;
     font-size: 23px;
     text-align: center;
     color: royalblue;
 }
+
+/* .ima {
+    background-image: url(../img/never.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+} */
+
+/* .letras {
+    color: white;
+    text-align: center;
+} */

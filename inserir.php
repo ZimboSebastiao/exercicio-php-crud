@@ -29,14 +29,15 @@ if(isset($_POST['inserir'])){
 <body>
 
     <!-- ======== Logotipo ======== -->
-    <p class="logo">
+    <!-- <p class="logo">
         <a href="visualizar.php">
             <img src="img/logo1.png" alt="Menu" width="130" height="32">
         </a>
-    </p>
+    </p> -->
 
 <!-- ======== Container - Tiago ======== -->
 <div class="container">
+    
 	<h1 class="h1">CRIANDO CADASTRO...</h1>
 
     <!-- ======== TABLE ======== -->
