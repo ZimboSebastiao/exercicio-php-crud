@@ -19,9 +19,11 @@ $listaDeAlunos = lerAlunos($conexao);
 <!-- ======== SideBar ======== -->
 <header>
     <a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-    <img src="img/more.png" alt="Menu" width="30" height="24">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
     </a>
-    <img src="img/security.png" alt="Menu" width="30" height="30">
+        <img src="img/logo.png" alt="Menu" width="120" height="30"> 
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
@@ -52,7 +54,11 @@ $listaDeAlunos = lerAlunos($conexao);
     <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
         <form class="d-flex" role="search">
-        <input class="form-control me-2 pesquisa" type="search" placeholder="Digite para pesquisar um aluno" aria-label="Search">
+        <p>
+
+            <input class="form-control me-2  pesquisa " type="search" placeholder="Digite para pesquisar um aluno" aria-label="Search">
+            <img class="lupa" src="img/lupa.png" alt="">
+        </p>
         <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
         </form>
     </div>
