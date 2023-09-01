@@ -24,12 +24,12 @@ function calcularMedia(float $n1, float $n2):float{
 
 function situacao($resultado):string{
     if($resultado >= 7){
-        $final = "<p class='aprovado'>Aprovado</p>";
+        $final = "<span class='aprovado'>Aprovado</span>";
 
     } elseif ($resultado >= 5 AND $resultado < 7){
-        $final =   "<p class='recuperacao'>Recuperação</p>";
+        $final =   "<span class='recuperacao'>Recuperação</span>";
     } else {
-        $final =   "<p class='reprovado'>Reprovado</p>";
+        $final =   "<span class='reprovado'>Reprovado</span>";
     }  
     return $final;
 }
