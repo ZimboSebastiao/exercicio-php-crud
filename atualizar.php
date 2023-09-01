@@ -56,7 +56,8 @@ if(isset($_POST['atualizar'])){
         <!-- Campo somente leitura e desabilitado para edição 
         Usado apenas para exibição do texto da situação -->
             <label for="situacao">Situação:</label>
-	        <input type="text" name="situacao" id="situacao" value="<?=situacao($resultado)?>" readonly disabled>
+            <?php $final = situacao($resultado); ?>
+	        <input type="text" name="situacao" id="situacao" value="<?php echo strip_tags($final);?>" readonly disabled>
         </p>
 	    
         <button name="atualizar">Atualizar dados do aluno</button>
