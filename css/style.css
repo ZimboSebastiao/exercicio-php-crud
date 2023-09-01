@@ -84,7 +84,15 @@ a:hover, a:focus { text-decoration: underline;}
 .h1 {
     color: green;
     text-align: center;
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .deletar {color: red;}
+
+/* ========= ATUALIZAR ========= */
+
+.centro {
+    font-size: 23px;
+    text-align: center;
+    color: royalblue;
+}

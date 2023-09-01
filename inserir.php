@@ -27,17 +27,19 @@ if(isset($_POST['inserir'])){
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ======== Logotipo ======== -->
     <p class="logo">
         <a href="visualizar.php">
             <img src="img/logo1.png" alt="Menu" width="130" height="32">
         </a>
     </p>
-     
+
+<!-- ======== Container - Tiago ======== -->
 <div class="container">
 	<h1 class="h1">CRIANDO CADASTRO...</h1>
 
-    		
-
+    <!-- ======== TABLE ======== -->
 	<form action="#" method="post">
 	    <p class="form-floating mb-3">
             <input class="form-control"  placeholder="name@example.com" type="text" id="nome" name="nome" required>
