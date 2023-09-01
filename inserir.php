@@ -74,8 +74,7 @@ if(isset($_POST['inserir'])){
 	    
 	</form>
 
-    <hr>
-    <p><a href="index.php">Voltar ao início</a></p>
+    
 </div>
 
 <!-- ======== JS Bootstrap ======== -->

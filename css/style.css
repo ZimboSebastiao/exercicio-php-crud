@@ -86,3 +86,5 @@ a:hover, a:focus { text-decoration: underline;}
     text-align: center;
     font-size: 25px;
 }
+
+.deletar {color: red;}
