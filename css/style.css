@@ -17,6 +17,10 @@ h2 a { font-size: 0.9rem;}
 
 a:hover, a:focus { text-decoration: underline;}
 
+.pesquisa {
+    width: 500px;
+    height: 20px;
+}
 .aprovado {color: green;}
 .reprovado {color: red;}
 .recuperacao {color: yellow;}
