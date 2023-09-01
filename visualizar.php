@@ -47,9 +47,10 @@ $quantidade = count($listaDeAlunos);
         </div>
     </div>
     </div>
-</header>
+</header> <!-- FIM SideBar  -->
 
 
+<!-- ======== Container - Tiago ======== -->
 <div class="container">
 
     <!-- ======== Search && LUPA ========= -->
@@ -135,9 +136,7 @@ $quantidade = count($listaDeAlunos);
           
     
 
-</div>
-
-
+</div> <!-- FIM Container - Tiago  -->
 
 
 <!-- ======== JS Bootstrap ======== -->
