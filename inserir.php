@@ -27,29 +27,58 @@ if(isset($_POST['inserir'])){
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+    <p class="logo">
+        <a href="visualizar.php">
+            <img src="img/logo1.png" alt="Menu" width="130" height="32">
+        </a>
+    </p>
+     
 <div class="container">
-	<h1>Cadastrar um novo aluno </h1>
-    <hr>
+	<h1 class="h1">CRIANDO CADASTRO...</h1>
+
     		
-    <p>Utilize o formulário abaixo para cadastrar um novo aluno.</p>
 
 	<form action="#" method="post">
-	    <p><label for="nome">Nome:</label>
-	    <input type="text" id="nome" name="nome" required></p>
+	    <p class="form-floating mb-3">
+            <input class="form-control"  placeholder="name@example.com" type="text" id="nome" name="nome" required>
+            <label for="nome">Nome do aluno</label>
+        </p>
         
-      <p><label for="primeira">Primeira nota:</label>
-	    <input type="number" id="primeira" name="primeira" step="0.01" min="0.00" max="10.00" required></p>
+        <p class="form-floating mb-3">
+            <input class="form-control"  placeholder="name@example.com" type="number" id="primeira" name="primeira" step="0.01" min="0.00" max="10.00" required>
+            <label for="primeira">Primeira nota</label>
+        </p>
 	    
-	    <p><label for="segunda">Segunda nota:</label>
-	    <input type="number" id="segunda" name="segunda" step="0.01" min="0.00" max="10.00" required></p>
+	    <p class="form-floating mb-3">
+            <input class="form-control"  placeholder="name@example.com" type="number" id="segunda" name="segunda" step="0.01" min="0.00" max="10.00" required>
+            <label for="segunda">Segunda nota</label>
+        </p>
+
+        <div class="contai">
+            <!-- ======== Salvar ======== -->
+            <button type="submit" name="inserir" class="btn btn-success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+            </svg>
+                Salvar
+            </button>
+
+            <!-- ======== Cancelar ======== -->
+            <a href="visualizar.php" class="btn btn-danger text-decoration-none " tabindex="-1" role="button" aria-disabled="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+                Cancelar
+            </a>
+        </div>
 	    
-        <button type="submit" name="inserir">Cadastrar aluno</button>
 	</form>
 
     <hr>
     <p><a href="index.php">Voltar ao início</a></p>
 </div>
 
+<!-- ======== JS Bootstrap ======== -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
