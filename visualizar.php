@@ -50,20 +50,20 @@ $quantidade = count($listaDeAlunos);
 </header>
 
 
-
 <div class="container">
-    <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-        <form class="d-flex" role="search">
-        <p>
 
-            <input class="form-control me-2  pesquisa " type="search" placeholder="Digite para pesquisar um aluno" aria-label="Search">
-            <img class="lupa" src="img/lupa.png" alt="">
-        </p>
-        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-        </form>
-    </div>
-    </nav>
+    <!-- ======== Search && LUPA ========= -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <form class="d-flex" role="search">
+            <p>
+
+                <input class="form-control me-2  pesquisa " type="search" placeholder="Digite para pesquisar um aluno" aria-label="Search">
+                <img class="lupa" src="img/lupa.png" alt="">
+            </p>           
+            </form>
+        </div>
+    </nav> <!-- FIM Search && LUPA  -->
 
     <p><a href="index.php">Voltar ao início</a></p>
     
@@ -106,10 +106,9 @@ $quantidade = count($listaDeAlunos);
         </tbody>
     </table> <!-- FIM TABELA  -->
 
-
+    <!-- ======== ADD && Paginação ========= -->
     <div class="contai">
-
-        <a href="inserir.php" class="btn btn-primary text-decoration-none" tabindex="-1" role="button" aria-disabled="true">
+        <a href="inserir.php" class="btn btn-primary text-decoration-none botao" tabindex="-1" role="button" aria-disabled="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"></path>
             </svg>
@@ -132,7 +131,7 @@ $quantidade = count($listaDeAlunos);
             </nav>
 
 
-    </div>
+    </div> <!-- ADD && Paginação  -->
           
     
 
@@ -141,7 +140,7 @@ $quantidade = count($listaDeAlunos);
 
 
 
-
+<!-- ======== JS Bootstrap ======== -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 <script src="js/confirma-exclusao.js"></script>
