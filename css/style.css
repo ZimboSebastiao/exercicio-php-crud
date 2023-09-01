@@ -38,11 +38,13 @@ a {
 h2 a { font-size: 0.9rem;}
 
 a:hover, a:focus { text-decoration: underline;}
+  
+  
 
 .pesquisa {
     width: 500px;
     height: 32px;
-    background-color: rgb(191, 199, 199);
+    background-color: #f5f5f5;
 }
 .lupa {
     background-image: url(../img/lupa.png);

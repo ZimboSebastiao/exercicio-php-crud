@@ -76,7 +76,7 @@ $quantidade = count($listaDeAlunos);
     
 
     <!-- ======== TABELA ========= -->
-    <table class="table table-bordered table-secondary table-striped">
+    <table class="table table-hover table-secondary table-striped">
         <thead class="table-dark">
             <tr>
             <th scope="col">ID</th>
