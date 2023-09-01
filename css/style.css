@@ -7,6 +7,20 @@ img {max-width: 100%;}
     width: 100%;
     margin: auto;
 }
+
+.contai {
+    /* background-color: brown; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.legend {
+
+    position: relative;
+    left: -20px;
+    margin: 4px;
+}
+
 p {
     padding: 0;
     margin: 0;

@@ -1,6 +1,7 @@
 <?php require_once "src/funcoes.php";
 
 $listaDeAlunos = lerAlunos($conexao);
+$quantidade = count($listaDeAlunos);
 
 ?>
 
@@ -12,7 +13,7 @@ $listaDeAlunos = lerAlunos($conexao);
 <title>Lista de alunos - Exercício CRUD com PHP e MySQL</title>
     <!-- ======== CSS Bootstrap ======== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -63,8 +64,7 @@ $listaDeAlunos = lerAlunos($conexao);
         </form>
     </div>
     </nav>
-    <h1>Lista de alunos</h1>
-    <hr>
+
     <p><a href="index.php">Voltar ao início</a></p>
     
 
@@ -93,12 +93,12 @@ $listaDeAlunos = lerAlunos($conexao);
 
                 <td>
                     <!-- ===== Editar ====== -->
-                    <a href="atualizar.php?id=<?=$aluno["id"]?>&nome=<?=$aluno["nome"]?>">
+                    <a class="text-decoration-none" href="atualizar.php?id=<?=$aluno["id"]?>&nome=<?=$aluno["nome"]?>">
                     Editar</a>
 
                         
                     <!-- ===== Excluir ====== -->
-                    <a class="excluir"  href="excluir.php?id=<?=$aluno["id"]?>&nome=<?=$aluno["nome"]?>">
+                    <a class="excluir text-decoration-none"  href="excluir.php?id=<?=$aluno["id"]?>&nome=<?=$aluno["nome"]?>">
                         Apagar</a>
                 </td>
             </tr>
@@ -107,18 +107,42 @@ $listaDeAlunos = lerAlunos($conexao);
     </table> <!-- FIM TABELA  -->
 
 
-    <a href="inserir.php" class="btn btn-primary bi bi-plus-lg" tabindex="-1" role="button" aria-disabled="true">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"></path>
-        </svg>
-        Adicionar novo aluno</a>
+    <div class="contai">
+
+        <a href="inserir.php" class="btn btn-primary text-decoration-none" tabindex="-1" role="button" aria-disabled="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"></path>
+            </svg>
+            Adicionar novo aluno</a>
+    
+            <nav aria-label="...">
+                <ul class="pagination pagination-sm">
+                    
+                    <p class="legend">Página 1 de 18 (<?=$quantidade?> registros no total) </p>
+
+                    <li class="page-item active" aria-current="page">
+                    <span class="page-link">1</span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                </ul>
+            </nav>
+
+
+    </div>
           
     
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 <script src="js/confirma-exclusao.js"></script>
 </body>
